@@ -1,0 +1,50 @@
+first_number = int(input('Primeiro valor: '))
+second_number = int(input('Segundo valor: '))
+option = int(input('''[ 1 ] somar
+[ 2 ] multiplicar
+[ 3 ] maior
+[ 4 ] novos números
+[ 5 ] sair do programa
+>>>>>Qual é a sua opção? '''))
+sum = 0
+multiplication = 0
+bigger = 0
+
+while option != 4:
+    if option == 1:
+        sum = first_number + second_number
+        print(sum)
+
+    else:
+        if option == 2:
+            multiplication = first_number*second_number
+
+        else:
+            if option == 3:
+                bigger = [first_number, second_number]
+                print(max(bigger))
+            if option == 4:
+                print('Informe os números novamente')
+                first_number = int(input('Primeiro valor: '))
+                second_number = int(input('Segundo valor: '))
+                option = int(input('''[ 1 ] somar
+                [ 2 ] multiplicar
+                [ 3 ] maior
+                [ 4 ] novos números
+                [ 5 ] sair do programa
+                >>>>>Qual é a sua opção? '''))
+
+                if option != 5:
+                    if option == 1:
+                        sum = first_number + second_number
+                        print(sum)
+                    else:
+                        if option == 2:
+                            multiplication = first_number * second_number
+                            print(multiplication)
+                        else:
+                            if option == 3:
+                                bigger = [first_number, second_number]
+                                print(max(bigger))
+            if option == 5:
+                print('Finalizando programa')
